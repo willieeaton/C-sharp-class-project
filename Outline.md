@@ -1,25 +1,29 @@
 # Overview
 
-- Pre-reqs
-    - Latest `.net core sdk` - [Download](https://github.com/SamirBanjanovic/SamirBanjanovic.CodeLouisville.CSharp.Projects.Docs.git)
-    - Your favorite Git tool
-        - Git - [Download](https://git-scm.com/downloads)
-        - GitKraken  - [Download](https://www.gitkraken.com/git-client)
-        - GitHub Desktop (macOS, Windows) - [Download](https://desktop.github.com/)
-- Project 1:
+Each project builds on the previous, so it's essential that each one is completed successfully.
 
-    - Creating a new `Console` application
-    - Introduction to `classes`
-    - Introduction to handling `user input`
-    - Introduction to `nuget packages`
+### Prerequisites
 
-- Project 2 [Builds on project 1]:
-    - Git branching
-    - Extend user input to request correct value `(validation?)`
-    - Introduction to `Collections` and `loops`
-    - Introduction to `nullable DateTime`
+- `.net core sdk` - [Download](https://github.com/SamirBanjanovic/SamirBanjanovic.CodeLouisville.CSharp.Projects.Docs.git)
+- `Git` - [Download](https://git-scm.com/downloads)
+- __Optional__ - A Git UI 
+    - GitKraken  - [Download](https://www.gitkraken.com/git-client)
+    - GitHub Desktop (macOS, Windows) - [Download](https://desktop.github.com/)
+# Project summaries
 
+### Project 1:
+- Creating a new `Console` application
+- Introduction to `classes`
+- Introduction to handling `user input`
+- Introduction to `nuget packages`
+#
 
+### Project 2:
+- Git branching
+- User input validation - `?`
+- Introduction to `loops`
+- Introduction to `Collections`
+#
 
 # Project 1
 
