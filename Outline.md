@@ -1,8 +1,10 @@
 # Overview
 
 - Pre-reqs
-    - Ensure all students have installed `.net core sdk` since guidance through command line is easier
-    - Ensure students understand Git
+    - Latest `.net core sdk`
+    - Your favorite Git tool
+        - GitHub Desktop
+        - GitKraken
 - Project 1:
     - Creating a new `Console` application
     - Introduction to `classes`
