@@ -4,7 +4,7 @@ Each project builds on the previous, so it's essential that each one is complete
 
 ### Prerequisites
 
-- `Project Fork` - [Download](https://github.com/SamirBanjanovic/SamirBanjanovic.CodeLouisville.CSharp.Projects.Docs.git)
+- `Fork this project` - [Download](https://github.com/SamirBanjanovic/SamirBanjanovic.CodeLouisville.CSharp.Projects.Docs.git)
 - `.net core sdk` - [Download](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 - `Git` - [Download](https://git-scm.com/downloads)
 - `Visual Studio` - [Download](https://visualstudio.microsoft.com/vs/community/)
