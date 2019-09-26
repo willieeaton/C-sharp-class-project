@@ -22,7 +22,7 @@ Each project builds on the previous, so it's essential that each one is complete
   - Wonder if need to cover this now?
 
 ### Project 2:
-- Git branching ??? Super important but how indepth do we need to be?
+- Git branching 
 - User input validation - `?`
 - Introduction to `loops`
 - Introduction to `Collections`
@@ -35,7 +35,9 @@ Each project builds on the previous, so it's essential that each one is complete
 
 # Project 1
 
-In this project we will create a simple application that prompts the user for input fields to populate a student object.  When the input is complete we will display the information back to the user. 
+## Goals and Needs
+
+In this project we will create a simple application that prompts the user for input fields to populate a student object.  When the input is complete we will display the information back to the user. This will teach basic input and output along with creating objects.
 
 - Create a new `Console` application and name it `[YourName].CodeLou.ExerciseProject`
 
@@ -99,3 +101,31 @@ static void Main(string[] args)
 ## Challenge
 
 Add a loop to allow the user to enter new student and display the output. Ask the user if they want to continue at the end of every loop. 
+
+
+# Project 2
+
+## Goal
+
+Store the list of students and allow them to be accessed. Along with validating the input and reprompting for invalid input. The search should tell the user if the name could not be found.
+
+## Work
+
+### Step 1
+
+Take the conditional loop that you created in the challenge in the previous project. After the object is created add the project to a `List<StudentRecord>` and a `Dictionary<string,StudentRecord>`, then build a menu to allow users to.
+
+1. Enter new student
+2. List all students
+3. Search for student by name
+4. Exit
+
+## Example
+
+![](Pictures/menu.png)
+
+![](Pictures/list.png)
+
+![](Pictures/search.png)
+
+![](Pictures/exit.png)
