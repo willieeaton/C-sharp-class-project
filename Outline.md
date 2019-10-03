@@ -107,7 +107,7 @@ Add a loop to allow the user to enter new student and display the output. Ask th
 
 ## Goal
 
-Store the list of students and allow them to be accessed. Along with validating the input and reprompting for invalid input. The search should tell the user if the name could not be found.
+Store the list of students and allow them to be accessed. Along with validating the input and reprompting for invalid input. The search should tell the user if the name could not be found. Input validation should use `DateTimeOffset.TryParse` and `Int32.TryParse` commands. Prompt them to re-enter the value if it does not validate.
 
 ## Work
 
@@ -129,3 +129,60 @@ Take the conditional loop that you created in the challenge in the previous proj
 ![](Pictures/search.png)
 
 ![](Pictures/exit.png)
+
+
+# Challenge
+
+Allow the user to search by users for class and make the search case insenstive. So for instance the studennt could have class `History` and `historY` or `HISTORY` should return the same results, then print out those results.
+
+# Project 3
+
+## Goal 
+
+Building on top of Project 2 allow the users to save the students to a file named `students.json`. You will
+
+1. Load students from this file
+2. Update records in a collection
+3. Save the file to disk
+
+For this you will need to install `Newtonsoft` which handles reading and writing to json files. This can be accomplished via Visual Studio manage nuget packages OR `dotnet add package Newtonsoft.Json --version 12.0.2` running this commandline will install the needed package. You will need some basic checks to check if the file exists or not.
+
+The code should look similiar to
+
+```
+_recordList = JsonConvert.DeserializeObject<List<Student>>(json);
+```
+
+```
+var json = JsonConvert.SerializeObject(_recordList);
+```
+And use the `File.IO` functions to read and write the `List<Student>` object/json to and from file. 
+
+The json should look something similiar to 
+
+```
+[
+    {
+        "StudentId": 1,
+        "FirstName": "Matt",
+        "LastName": "Durham",
+        "ClassName": "History",
+        "StartDate": "2018-03-12T00:00:00-04:00",
+        "LastClassCompleted": "Science",
+        "LastClassCompletedOn": "1991-03-16T00:00:00-05:00"
+    },
+    {
+        "StudentId": 2,
+        "FirstName": "Johhny",
+        "LastName": "Smith",
+        "ClassName": "History",
+        "StartDate": "1976-04-12T00:00:00-04:00",
+        "LastClassCompleted": "Biology",
+        "LastClassCompletedOn": "1998-03-16T00:00:00-05:00"
+    }
+]
+```
+
+## Challenge
+
+Validate that the `LastClassCompletedOn` comes after the `StartDate` and that the `StudentId` is unique. In the sense that in the above JSON Johnny Smith could NOT have a `StudentId` of 1.
