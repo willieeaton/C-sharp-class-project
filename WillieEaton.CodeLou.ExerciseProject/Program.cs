@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace WillieEaton.CodeLou.ExerciseProject
 {
@@ -6,14 +7,15 @@ namespace WillieEaton.CodeLou.ExerciseProject
     {
         static void Main()
         {
+            bool finished = false;
+            List<Student> students = new List<Student>();
+
             Console.WriteLine("Welcome to the Student Registry.  Let\'s create a");
             Console.WriteLine("new student record!");
 
-            bool finishedFlag = false;
-
             do
             {
-
+                Console.WriteLine("");
                 Console.WriteLine("Enter the Student ID number.");
                 var studentId = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter the student\'s given name.");
@@ -40,17 +42,24 @@ namespace WillieEaton.CodeLou.ExerciseProject
                     LastClassCompletedOn = lastClassCompletedOn
                 };
 
-                Console.WriteLine("");
-                Console.WriteLine($"Student ID: {newStudent.StudentId}");
-                Console.WriteLine($"Student name: {newStudent.FirstName} {newStudent.LastName}");
-                Console.WriteLine($"Current class: {newStudent.ClassName} started {newStudent.StartDate}");
-                Console.WriteLine($"Previous class: {newStudent.LastClassCompleted} finished {newStudent.LastClassCompletedOn}");
+                students.Add(newStudent);
+
                 Console.WriteLine("");
                 Console.WriteLine("Add another student record?");
                 string response = Console.ReadLine().ToUpper();
                 if (response == "N" || response == "NO")
-                    finishedFlag = true;
-            } while (finishedFlag == false);
+                    finished = true;
+
+            } while (finished == false);
+
+            foreach(Student student in students)
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine($"Student ID: {student.StudentId}");
+                    Console.WriteLine($"Student name: {student.FirstName} {student.LastName}");
+                    Console.WriteLine($"Current class: {student.ClassName} started {student.StartDate}");
+                    Console.WriteLine($"Previous class: {student.LastClassCompleted} finished {student.LastClassCompletedOn}");
+                }
         }
     }
-}
+} 
