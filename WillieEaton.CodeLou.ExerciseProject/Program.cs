@@ -7,11 +7,10 @@ namespace WillieEaton.CodeLou.ExerciseProject
     {
         static void Main()
         {
-            bool finished = false;
-            List<Student> students = new List<Student>();
+            var finished = false;
+            var students = new List<Student>();
 
-            Console.WriteLine("Welcome to the Student Registry.  Let\'s create a");
-            Console.WriteLine("new student record!");
+            Console.WriteLine("Welcome to the Student Registry.  Let\'s create a new student record!");
 
             do
             {
@@ -41,18 +40,17 @@ namespace WillieEaton.CodeLou.ExerciseProject
                     LastClassCompleted = lastClassCompleted,
                     LastClassCompletedOn = lastClassCompletedOn
                 };
-
                 students.Add(newStudent);
 
                 Console.WriteLine("");
                 Console.WriteLine("Add another student record?");
-                string response = Console.ReadLine().ToUpper();
+                var response = Console.ReadLine().ToUpper();
                 if (response == "N" || response == "NO")
                     finished = true;
 
-            } while (finished == false);
+            } while (!finished);
 
-            foreach(Student student in students)
+            foreach(var student in students)
                 {
                     Console.WriteLine("");
                     Console.WriteLine($"Student ID: {student.StudentId}");
