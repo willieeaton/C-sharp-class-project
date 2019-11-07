@@ -17,9 +17,9 @@ namespace WillieEaton.CodeLou.ExerciseProject
                 Console.WriteLine("");
                 Console.WriteLine("Enter the Student ID number.");
                 var studentId = int.Parse(Console.ReadLine());
-                Console.WriteLine("Enter the student\'s given name.");
+                Console.WriteLine("Enter the student\'s first (given) name.");
                 var firstName = Console.ReadLine();
-                Console.WriteLine("Enter the student\'s family name.");
+                Console.WriteLine("Enter the student\'s last (family) name.");
                 var lastName = Console.ReadLine();
                 Console.WriteLine("Enter the current class in which the student is enrolled.");
                 var className = Console.ReadLine();
@@ -46,18 +46,19 @@ namespace WillieEaton.CodeLou.ExerciseProject
                 Console.WriteLine("Add another student record?");
                 var response = Console.ReadLine().ToUpper();
                 if (response == "N" || response == "NO")
+                {
                     finished = true;
-
+                }
             } while (!finished);
 
             foreach(var student in students)
-                {
-                    Console.WriteLine("");
-                    Console.WriteLine($"Student ID: {student.StudentId}");
-                    Console.WriteLine($"Student name: {student.FirstName} {student.LastName}");
-                    Console.WriteLine($"Current class: {student.ClassName} started {student.StartDate}");
-                    Console.WriteLine($"Previous class: {student.LastClassCompleted} finished {student.LastClassCompletedOn}");
-                }
+            {
+                Console.WriteLine("");
+                Console.WriteLine($"Student ID: {student.StudentId}");
+                Console.WriteLine($"Student name: {student.FirstName} {student.LastName}");
+                Console.WriteLine($"Current class: {student.ClassName} started {student.StartDate}");
+                Console.WriteLine($"Previous class: {student.LastClassCompleted} finished {student.LastClassCompletedOn}");
+            }
         }
     }
 } 
